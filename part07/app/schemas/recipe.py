@@ -28,3 +28,6 @@ class Recipe(RecipeInDBBase):
 
 class RecipeInDB(RecipeInDBBase):
     pass
+
+class RecipeSearchResults(BaseModel):
+    results: Sequence[Recipe]
