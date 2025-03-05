@@ -9,7 +9,6 @@ from schemas.recipe import RecipeSearchResults, Recipe, RecipeCreate
 import deps
 import crud
 
-
 ROOT = Path(__file__).resolve().parent.parent
 BASE_PATH = Path(__file__).resolve().parent
 TEMPLATES = Jinja2Templates(directory=str(BASE_PATH / "templates"))

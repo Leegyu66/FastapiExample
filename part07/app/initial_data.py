@@ -1,6 +1,7 @@
 import logging
 
 from db.base import Base
+from db.session import engine
 from db.init_db import init_db
 from db.session import SessionLocal
 
@@ -10,6 +11,7 @@ logger = logging.getLogger(__name__)
 
 def init() -> None:
     db = SessionLocal()
+    Base.metadata.create_all(bind=engine)
     init_db(db)
 
 
